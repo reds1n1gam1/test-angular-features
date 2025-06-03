@@ -1,15 +1,14 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { PlaybookComponent } from './Playbook.component';
+import { Routes } from '@angular/router';
+import { PlaybookComponent } from './playbook.component';
 
-export const PlaybookRoutes: Routes = [
+export const playbookRoutes: Routes = [
   {
-    path: '',
+    path: 'playbook',
     component: PlaybookComponent,
     children: [
       {
-        path: 'playbook',
-        loadChildren: () => import('./PlaybookPage/PlaybookPage-routing.module').then(m => m.PlaybookPageRoutingModule)
+        path: '',
+        loadChildren: () => import('./PlaybookPage/PlaybookPage.module.').then(m => m.PlaybookModule)
       }
     ]
   }

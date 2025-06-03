@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { EntranceComponent } from './Entrance/Entrance.component';
+import { EntranceComponent } from './entrance.component';
 
 export const entranceRoutes: Routes = [
   {
@@ -8,9 +8,8 @@ export const entranceRoutes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./Entrance/EntrancePage/EntrancePage-routing.module').then(m => m.EntrancePageRoutingModule)
+        loadChildren: () => import('./EntrancePage/entrance-page.module').then(m => m.EntrancePageModule)
       }
     ]
   }
 ];
-
