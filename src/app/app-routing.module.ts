@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { playbookRoutes } from './Playbook/playbook-routing.module.';
-import { entranceRoutes } from './Entrance/entrance-page-routing.module';
 
 const routes: Routes = [
-  ...entranceRoutes,
-  ...playbookRoutes,
+  {
+    path: '',
+    loadChildren: () => import('./entrance/entrance.module').then(m => m.EntranceModule)
+  },
+  {
+    path: 'playbook',
+    loadChildren: () => import('./playbook/playbook.module').then(m => m.PlaybookModule)
+  }
 ];
 
 @NgModule({

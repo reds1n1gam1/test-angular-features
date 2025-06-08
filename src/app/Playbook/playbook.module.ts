@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PlaybookRoutingModule } from './playbook-routing.module';
 import { PlaybookComponent } from './playbook.component';
-import { PlaybookPageRoutingModule } from './PlaybookPage/PlaybookPage-routing.module';
 
 @NgModule({
-  declarations: [PlaybookComponent],
-  imports: [CommonModule, PlaybookPageRoutingModule]
+  imports: [
+    CommonModule,
+    PlaybookRoutingModule
+  ],
+  declarations: [PlaybookComponent]
 })
-export class FeatureBModule {}
+export class PlaybookModule { }

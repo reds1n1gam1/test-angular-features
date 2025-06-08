@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { EntranceRoutingModule } from './entrance-routing.module';
 import { EntranceComponent } from './entrance.component';
-import { EntrancePageRoutingModule } from './EntrancePage/EntrancePage-routing.module';
 
 @NgModule({
-  declarations: [EntranceComponent],
-  imports: [CommonModule, EntrancePageRoutingModule]
+  imports: [
+    CommonModule,
+    EntranceRoutingModule
+  ],
+  declarations: [EntranceComponent]
 })
-export class FeatureBModule {}
+export class EntranceModule { }
