@@ -3,6 +3,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@tpa/utils": [
+        "./dist/tpa/utils"
+      ],
+      "@tpa/utils/sw-update": [
+        "./dist/tpa/utils/sw-update"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

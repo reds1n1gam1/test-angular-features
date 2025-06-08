@@ -4,12 +4,26 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@tpa/utils/*": [
+        "./dist/tpa/utils/*"
+      ],
+      "@tpa/utils": [
+        "./dist/tpa/utils/*"
+      ],
+      "@tpa/utils/sw-update/*": [
+        "./dist/tpa/utils/sw-update/*"
+      ],
+      "@tpa/utils/sw-update": [
+        "./dist/tpa/utils/sw-update"
+      ]
+    }
   },
   "files": [
     "src/main.ts"
   ],
   "include": [
     "src/**/*.d.ts"
-  ]
+  ],
 }
